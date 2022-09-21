@@ -1,11 +1,13 @@
-version: '3'
+version: '3.8'
 services:
   db:
     image: postgres
+    container_name: blog-db
     environment:
       - POSTGRES_PASSWORD=password
   web:
     build: .
+    container_name: blog-web
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/myapp

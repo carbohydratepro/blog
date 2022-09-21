@@ -6,6 +6,7 @@ application up and running.
 # 0. バージョン
 - ruby -> 3.1.2
 - rails -> 7.0.3.1
+- docker compose -> 3.8
 
 # 1. 環境構築
 ### 1-1. Gitリポジトリをクローン
