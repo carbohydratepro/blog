@@ -3,22 +3,30 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+# 0. バージョン
+- ruby -> 3.1.2
+- rails -> 7.0.3.1
 
-* Ruby version
+# 1. 環境構築
+### 1-1. Gitリポジトリをクローン
+git clone https://github.com/carbohydratepro/blog.git
 
-* System dependencies
+cd blog
 
-* Configuration
+### 1-2. dockerイメージをbuild
+docker-compose build
 
-* Database creation
+### 1-3. Dockerを起動
+docker-compose up -d
 
-* Database initialization
+### 1-4. コマンドを実行
+docker-compose run web rake db:create
 
-* How to run the test suite
+docker-compose run web bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+docker-compose run web bundle exec rake app:update:bin
 
-* Deployment instructions
+### 1-5. localhost:3000にアクセス
+Railsの画面が表示されていれば成功
 
-* ...
+
